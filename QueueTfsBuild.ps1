@@ -2,7 +2,8 @@ $rootTfsUri = "http://myTFS:8080/tfs"
 $collectionName = "Default"
 $projectName = "Project1"
 $tfsUri = $rootTfsUri + "/" + $collectionName + "/" + $projectName
-$buildDefinitionUri = "$tfsUri/_apis/build/definitions?api-version=3.1&name=CSSDevCI-vnext" 
+$buildDefinition = "DevCI-vnext"
+$buildDefinitionUri = "$tfsUri/_apis/build/definitions?api-version=3.1&name=$buildDefinition" 
 
 # first get build definition id
 $buildResponse = Invoke-WebRequest -Uri $buildDefinitionUri -UseDefaultCredentials -Method Get -Verbose -UseBasicParsing -ContentType "application/json" 
