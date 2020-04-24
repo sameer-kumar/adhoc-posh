@@ -65,7 +65,7 @@
     End{}
 }
 
-$varList = Get-VariableGroupDetails -VariableGroupName 'CBMPEnvironmentVariablesDEV' -TfsProjectUri 'http://tfwa/Projects/FixedIncome.CBMP'
+$varList = Get-VariableGroupDetails -VariableGroupName 'CBMPEnvironmentVariablesDEV' -TfsProjectUri 'http://tfs/Projects/PRJ'
 $releaseVaraiables = $varlist
 if($releaseVaraiables)
 {
